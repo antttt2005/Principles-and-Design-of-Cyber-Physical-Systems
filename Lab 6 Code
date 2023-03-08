@@ -1,0 +1,83 @@
+#include "vex.h"
+
+
+// ---- START VEXCODE CONFIGURED DEVICES ----
+// Robot Configuration:
+// [Name]               [Type]        [Port(s)]
+// RoboticArm1          RoboticArm    1, 2, 3, 4, A, B, C, D
+// onEStop              bumper        E              
+// ---- END VEXCODE CONFIGURED DEVICES ----
+
+
+
+
+using namespace vex;
+
+
+
+
+void onEStopPressed() {
+}
+
+
+
+
+int main() {
+vexcodeInit();
+
+
+
+
+RoboticArm1.setMasteringValues(1761, 2212, 1884, 451);
+RoboticArm1.setToolTipOffset(0,0,-1.5);
+//V
+RoboticArm1.moveToPositionLinear(4, -4,3);
+wait(1, seconds);
+RoboticArm1.moveToPositionLinear(4, -4,0.5);
+wait(.75, seconds);
+RoboticArm1.moveToPositionLinear(6,-3.5, 0.5);
+wait(.75, seconds);
+RoboticArm1.moveToPositionLinear(4,-2,1.3);
+//E
+wait(1, seconds);
+RoboticArm1.moveToPositionLinear(4, -1, 3);
+wait(.75, seconds);
+RoboticArm1.moveToPositionLinear(4, -1, 1.5);
+wait(.75, seconds);
+RoboticArm1.moveToPositionLinear(4, .25, 1.5);
+wait(.75, seconds);
+RoboticArm1.moveToPositionLinear(4, -1.1, 3);
+wait(.75, seconds);
+RoboticArm1.moveToPositionLinear(4.35, -1, .8);
+wait(.75, seconds);
+RoboticArm1.moveToPositionLinear(5.8, -1, .8);
+wait(.75, seconds);
+RoboticArm1.moveToPositionLinear(5.8, .25, .7);
+wait(.75, seconds);
+RoboticArm1.moveToPositionLinear(5.8, -1, 2.5);
+wait(.75, seconds);
+RoboticArm1.moveToPositionLinear(5, -1, 2.5);
+wait(.75, seconds);
+RoboticArm1.moveToPositionLinear(4.9, -1, .65);
+wait(.75, seconds);
+RoboticArm1.moveToPositionLinear(4.9, .25, .65);
+wait(.75, seconds);
+//X
+RoboticArm1.moveToPositionLinear(4,0.5,2.5);
+RoboticArm1.moveToPositionLinear(4,0.5,0.65);
+RoboticArm1.moveToPositionLinear(6,2.5,0.65);
+RoboticArm1.moveToPositionLinear(6,2.5,2.5);
+RoboticArm1.moveToPositionLinear(4,3,2.5);
+RoboticArm1.moveToPositionLinear(4,3,0.65);
+RoboticArm1.moveToPositionLinear(6,0.5,0.65);
+RoboticArm1.moveToPositionLinear(6,0.5,2.5);
+
+
+
+
+}
+
+
+
+
+
