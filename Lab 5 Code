@@ -1,0 +1,37 @@
+#include "vex.h"
+
+
+using namespace vex;
+
+
+void onEStopPressed() {
+}
+
+
+int main() {
+ vexcodeInit();
+
+
+ EStop.pressed(onEStopPressed);
+
+
+ wait(15, msec);
+
+
+ RoboticArm1.setMasteringValues(1761, 2171, 1966, 410);
+ RoboticArm1.setToolTipOffset(0,0,-1.5);
+
+
+
+
+ RoboticArm1.moveToPositionLinear(4,0,1);
+ wait(1, seconds);
+ RoboticArm1.moveToPositionLinear(6.5,0,0.40);
+  wait(1, seconds);
+ RoboticArm1.moveToPositionLinear(6.5,-2,0.40);
+  wait(1, seconds);
+ RoboticArm1.moveToPositionLinear(4,-2,1);
+  wait(1, seconds);
+ RoboticArm1.moveToPositionLinear(4,0,1);
+  wait(1, seconds);
+}
